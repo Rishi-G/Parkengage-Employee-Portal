@@ -1,0 +1,6 @@
+{
+  "name": "Employee Management Dashboard",
+  "description": "A premium, state-of-the-art corporate employee management system dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
