@@ -24,6 +24,26 @@ export interface EmployeeProfile {
   panNumber: string;
   pfAccountNumber: string;
   uanNumber: string;
+  // Professional Roster Extensions
+  orgLevel?: 1 | 2 | 3 | 4;
+  mentor?: string;
+  timing?: string;
+  joiningLocation?: string;
+  employmentType?: 'Regular' | 'Third-Party';
+  thirdPartyCompany?: string;
+  thirdPartyDepartment?: string;
+  costToCompany?: number | string;
+  netSalary?: number;
+  packageAmount?: number;
+  takeHomeSalary?: number | string;
+  salaryBreakup?: {
+    basic: number;
+    hra: number;
+    bonus: number;
+    incentives: number;
+    pfDeduction?: number;
+    specialAllowance?: number;
+  };
 }
 
 export interface AttendanceRecord {
@@ -101,7 +121,7 @@ export interface DirectoryUser {
   department: string;
   designation: string;
   avatarUrl: string;
-  status: 'Active' | 'On Leave';
+  status: 'Active' | 'On Leave' | 'Suspended';
 }
 
 export interface ReimbursementClaim {

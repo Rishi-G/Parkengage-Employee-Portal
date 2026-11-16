@@ -1,0 +1,1192 @@
+{
+  "schemaVersion": "1.0.0",
+  "description": "Canonical keyed data store for ParkEngage HR Portal. Keys in dbKeys map 1:1 to collections and browser persistence storage for future Firestore/DB migration.",
+  "dbKeys": {
+    "theme": "parkengage_theme",
+    "sessionToken": "parkengage_session_token",
+    "rememberId": "parkengage_remember_id",
+    "userPassword": "parkengage_user_password",
+    "checkedIn": "parkengage_checked_in",
+    "checkinTime": "parkengage_checkin_time",
+    "checkinTimestamp": "parkengage_checkin_timestamp",
+    "profile": "parkengage_profile",
+    "superAdminProfile": "parkengage_super_admin",
+    "allProfiles": "parkengage_all_profiles",
+    "directory": "parkengage_directory",
+    "attendance": "parkengage_attendance",
+    "leaveBalance": "parkengage_leave_balance",
+    "leaveRequests": "parkengage_leave_requests",
+    "tasks": "parkengage_tasks",
+    "payslips": "parkengage_payslips",
+    "announcements": "parkengage_announcements",
+    "acknowledgedAnnouncements": "parkengage_acknowledged_announcements",
+    "claims": "parkengage_claims",
+    "tickets": "parkengage_tickets",
+    "globalConfig": "parkengage_global_config",
+    "adminDepartments": "parkengage_admin_depts",
+    "adminAssets": "parkengage_admin_assets",
+    "adminWorkflows": "parkengage_admin_workflows",
+    "adminSiteBrand": "parkengage_admin_sys_brand",
+    "adminLeaveRules": "parkengage_admin_leave_rules",
+    "adminGraceRules": "parkengage_admin_grace_rules",
+    "companyHolidays": "parkengage_company_holidays",
+    "shiftModels": "parkengage_shift_models",
+    "joiningFormalities": "parkengage_joining_formalities",
+    "slaPolicies": "parkengage_sla_policies",
+    "timesheetSubmission": "parkengage_timesheet_submission",
+    "payrollCycle": "parkengage_payroll_cycle",
+    "monthlyApprovals": "parkengage_monthly_approvals",
+    "onboardingState": "parkengage_onboarding_state",
+    "onboardingForms": "parkengage_onboarding_forms",
+    "kudos": "parkengage_kudos",
+    "landingHighlights": "parkengage_landing_highlights",
+    "orgHierarchyChart": "parkengage_org_chart",
+    "bankDetailsPrefix": "parkengage_bank_details_",
+    "authCredentials": "parkengage_auth_credentials",
+    "biMetrics": "parkengage_bi_metrics"
+  },
+  "collections": {
+    "parkengage_auth_credentials": {
+      "defaultEmployeeId": "PE2604045",
+      "defaultEmployeeEmail": "rishi.gautam@parkengage.com",
+      "defaultEmployeePassword": "tototo222",
+      "superAdminUsername": "superadmin",
+      "superAdminEmail": "superadmin@parkengage.com",
+      "superAdminPassword": "admin123",
+      "recoveryContactEmail": "it-helpdesk@parkengage.com"
+    },
+    "parkengage_profile": {
+      "employeeId": "PE2604045",
+      "firstName": "Rishi",
+      "lastName": "Gautam",
+      "email": "rishi.gautam@parkengage.com",
+      "phone": "+91 98765 43210",
+      "department": "UI/ UX Research and development department",
+      "designation": "UI Architect and Product Design",
+      "joiningDate": "August 12, 2022",
+      "manager": "Vishal Gupta ( VP of IT Operations )",
+      "orgLevel": 3,
+      "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+      "status": "Active",
+      "gender": "Male",
+      "dob": "November 23, 1994",
+      "bloodGroup": "O+ - Positive",
+      "emergencyContactName": "Aarav Gautam",
+      "emergencyContactPhone": "+91 98123 45678",
+      "address": "Apartment 202, Sector 62, Noida, Uttar Pradesh - 201301",
+      "bankName": "HDFC Bank",
+      "bankAccountNo": "******8820491",
+      "ifscCode": "HDFC0000240",
+      "panNumber": "ABCDE1234F",
+      "pfAccountNumber": "UP/NOI/1234567/045",
+      "uanNumber": "101839201948",
+      "costToCompany": "₹18.5 Lakhs",
+      "takeHomeSalary": "₹1,24,000"
+    },
+    "parkengage_super_admin": {
+      "employeeId": "PE0000001",
+      "firstName": "Super",
+      "lastName": "Admin",
+      "email": "superadmin@parkengage.com",
+      "phone": "+91 99999 88888",
+      "department": "Executive Board Division",
+      "designation": "Super Administrator",
+      "joiningDate": "June 01, 2020",
+      "manager": "Executive Board",
+      "orgLevel": 1,
+      "avatarUrl": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=200",
+      "status": "Active",
+      "gender": "Male",
+      "dob": "1980-01-01",
+      "bloodGroup": "O+ Positive",
+      "emergencyContactName": "Board Secretariat",
+      "emergencyContactPhone": "+91 00000 00000",
+      "address": "ParkEngage Corporate HQ Suite S100",
+      "bankName": "HDFC Corporate Treasury",
+      "bankAccountNo": "******00001",
+      "ifscCode": "HDFC0000001",
+      "panNumber": "ADMSR1234A",
+      "pfAccountNumber": "HQ/ADM/00001",
+      "uanNumber": "100000000001"
+    },
+    "parkengage_directory": [
+      {
+        "employeeId": "PE2604045",
+        "fullName": "Rishi Gautam",
+        "email": "rishi.gautam@parkengage.com",
+        "phone": "+91 98765 43210",
+        "department": "UI/ UX Research and development department",
+        "designation": "UI Architect and Product Design",
+        "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+        "status": "Active"
+      },
+      {
+        "employeeId": "PE2604001",
+        "fullName": "Vishal Gupta",
+        "email": "vishal.gupta@parkengage.com",
+        "phone": "+91 99123 45678",
+        "department": "IT Operations",
+        "designation": "VP of IT Operations",
+        "avatarUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200",
+        "status": "Active"
+      },
+      {
+        "employeeId": "PE2604033",
+        "fullName": "Neha Sharma",
+        "email": "neha.sharma@parkengage.com",
+        "phone": "+91 98234 56789",
+        "department": "Product Engineering",
+        "designation": "Lead Systems Architect",
+        "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200",
+        "status": "Active"
+      },
+      {
+        "employeeId": "PE2604071",
+        "fullName": "Manish Patel",
+        "email": "manish.patel@parkengage.com",
+        "phone": "+91 98345 67890",
+        "department": "Global Operations",
+        "designation": "Operations Fleet Logistics Coordinator",
+        "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+        "status": "Active"
+      },
+      {
+        "employeeId": "PE2604085",
+        "fullName": "Siddharth Nair",
+        "email": "siddharth.n@parkengage.com",
+        "phone": "+91 98456 78901",
+        "department": "Customer Success",
+        "designation": "Enterprise Relations Manager",
+        "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
+        "status": "On Leave"
+      },
+      {
+        "employeeId": "PE2604012",
+        "fullName": "Tanya Jamil",
+        "email": "tanya.j@parkengage.com",
+        "phone": "+91 98567 89012",
+        "department": "Product Engineering",
+        "designation": "Senior Frontend Engineer",
+        "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200",
+        "status": "Active"
+      },
+      {
+        "employeeId": "PE2604018",
+        "fullName": "Rahul Mehta",
+        "email": "rahul.mehta@parkengage.com",
+        "phone": "+91 98678 90123",
+        "department": "Finance & Accounts",
+        "designation": "Principal Controller",
+        "avatarUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200",
+        "status": "Active"
+      }
+    ],
+    "parkengage_all_profiles": [
+      {
+        "employeeId": "PE2604045",
+        "firstName": "Rishi",
+        "lastName": "Gautam",
+        "email": "rishi.gautam@parkengage.com",
+        "phone": "+91 98765 43210",
+        "department": "UI/ UX Research and development department",
+        "designation": "UI Architect and Product Design",
+        "joiningDate": "August 12, 2022",
+        "manager": "Vishal Gupta ( VP of IT Operations )",
+        "orgLevel": 3,
+        "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+        "status": "Active",
+        "gender": "Male",
+        "dob": "November 23, 1994",
+        "bloodGroup": "O+ - Positive",
+        "emergencyContactName": "Aarav Gautam",
+        "emergencyContactPhone": "+91 98123 45678",
+        "address": "Apartment 202, Sector 62, Noida, Uttar Pradesh - 201301",
+        "bankName": "HDFC Bank",
+        "bankAccountNo": "******8820491",
+        "ifscCode": "HDFC0000240",
+        "panNumber": "ABCDE1234F",
+        "pfAccountNumber": "UP/NOI/1234567/045",
+        "uanNumber": "101839201948",
+        "costToCompany": "₹18.5 Lakhs",
+        "takeHomeSalary": "₹1,24,000"
+      },
+      {
+        "employeeId": "PE2604001",
+        "firstName": "Vishal",
+        "lastName": "Gupta",
+        "email": "vishal.gupta@parkengage.com",
+        "phone": "+91 99123 45678",
+        "department": "IT Operations",
+        "designation": "VP of IT Operations",
+        "joiningDate": "August 12, 2022",
+        "manager": "Executive Board of ParkEngage Inc",
+        "orgLevel": 2,
+        "avatarUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200",
+        "status": "Active",
+        "gender": "Unspecified",
+        "dob": "1993-04-12",
+        "bloodGroup": "B+ Positive",
+        "emergencyContactName": "Primary Emergency Contact",
+        "emergencyContactPhone": "+91 99123 45678",
+        "address": "Noida Hub Central Block 2, Delhi NCR",
+        "bankName": "HDFC Bank",
+        "bankAccountNo": "******100557",
+        "ifscCode": "HDFC0000424",
+        "panNumber": "ABCDE5432G",
+        "pfAccountNumber": "UP/NOI/1234567/001",
+        "uanNumber": "1010019482"
+      },
+      {
+        "employeeId": "PE2604033",
+        "firstName": "Neha",
+        "lastName": "Sharma",
+        "email": "neha.sharma@parkengage.com",
+        "phone": "+91 98234 56789",
+        "department": "Product Engineering",
+        "designation": "Lead Systems Architect",
+        "joiningDate": "August 12, 2022",
+        "manager": "Vishal Gupta ( VP of IT Operations )",
+        "orgLevel": 2,
+        "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200",
+        "status": "Active",
+        "gender": "Unspecified",
+        "dob": "1993-04-12",
+        "bloodGroup": "B+ Positive",
+        "emergencyContactName": "Primary Emergency Contact",
+        "emergencyContactPhone": "+91 98234 56789",
+        "address": "Noida Hub Central Block 2, Delhi NCR",
+        "bankName": "HDFC Bank",
+        "bankAccountNo": "******100694",
+        "ifscCode": "HDFC0000424",
+        "panNumber": "ABCDE5432G",
+        "pfAccountNumber": "UP/NOI/1234567/033",
+        "uanNumber": "1010339482"
+      },
+      {
+        "employeeId": "PE2604071",
+        "firstName": "Manish",
+        "lastName": "Patel",
+        "email": "manish.patel@parkengage.com",
+        "phone": "+91 98345 67890",
+        "department": "Global Operations",
+        "designation": "Operations Fleet Logistics Coordinator",
+        "joiningDate": "August 12, 2022",
+        "manager": "Vishal Gupta ( VP of IT Operations )",
+        "orgLevel": 4,
+        "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+        "status": "Active",
+        "gender": "Unspecified",
+        "dob": "1993-04-12",
+        "bloodGroup": "B+ Positive",
+        "emergencyContactName": "Primary Emergency Contact",
+        "emergencyContactPhone": "+91 98345 67890",
+        "address": "Noida Hub Central Block 2, Delhi NCR",
+        "bankName": "HDFC Bank",
+        "bankAccountNo": "******100831",
+        "ifscCode": "HDFC0000424",
+        "panNumber": "ABCDE5432G",
+        "pfAccountNumber": "UP/NOI/1234567/071",
+        "uanNumber": "1010719482"
+      },
+      {
+        "employeeId": "PE2604085",
+        "firstName": "Siddharth",
+        "lastName": "Nair",
+        "email": "siddharth.n@parkengage.com",
+        "phone": "+91 98456 78901",
+        "department": "Customer Success",
+        "designation": "Enterprise Relations Manager",
+        "joiningDate": "August 12, 2022",
+        "manager": "Vishal Gupta ( VP of IT Operations )",
+        "orgLevel": 3,
+        "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
+        "status": "On Leave",
+        "gender": "Unspecified",
+        "dob": "1993-04-12",
+        "bloodGroup": "B+ Positive",
+        "emergencyContactName": "Primary Emergency Contact",
+        "emergencyContactPhone": "+91 98456 78901",
+        "address": "Noida Hub Central Block 2, Delhi NCR",
+        "bankName": "HDFC Bank",
+        "bankAccountNo": "******100968",
+        "ifscCode": "HDFC0000424",
+        "panNumber": "ABCDE5432G",
+        "pfAccountNumber": "UP/NOI/1234567/085",
+        "uanNumber": "1010859482"
+      },
+      {
+        "employeeId": "PE2604012",
+        "firstName": "Tanya",
+        "lastName": "Jamil",
+        "email": "tanya.j@parkengage.com",
+        "phone": "+91 98567 89012",
+        "department": "Product Engineering",
+        "designation": "Senior Frontend Engineer",
+        "joiningDate": "August 12, 2022",
+        "manager": "Neha Sharma ( Lead Systems Architect )",
+        "orgLevel": 4,
+        "avatarUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200",
+        "status": "Active",
+        "gender": "Unspecified",
+        "dob": "1993-04-12",
+        "bloodGroup": "B+ Positive",
+        "emergencyContactName": "Primary Emergency Contact",
+        "emergencyContactPhone": "+91 98567 89012",
+        "address": "Noida Hub Central Block 2, Delhi NCR",
+        "bankName": "HDFC Bank",
+        "bankAccountNo": "******101105",
+        "ifscCode": "HDFC0000424",
+        "panNumber": "ABCDE5432G",
+        "pfAccountNumber": "UP/NOI/1234567/012",
+        "uanNumber": "1010129482"
+      },
+      {
+        "employeeId": "PE2604018",
+        "firstName": "Rahul",
+        "lastName": "Mehta",
+        "email": "rahul.mehta@parkengage.com",
+        "phone": "+91 98678 90123",
+        "department": "Finance & Accounts",
+        "designation": "Principal Controller",
+        "joiningDate": "August 12, 2022",
+        "manager": "Executive Board of ParkEngage Inc",
+        "orgLevel": 1,
+        "avatarUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200",
+        "status": "Active",
+        "gender": "Unspecified",
+        "dob": "1993-04-12",
+        "bloodGroup": "B+ Positive",
+        "emergencyContactName": "Primary Emergency Contact",
+        "emergencyContactPhone": "+91 98678 90123",
+        "address": "Noida Hub Central Block 2, Delhi NCR",
+        "bankName": "HDFC Bank",
+        "bankAccountNo": "******101242",
+        "ifscCode": "HDFC0000424",
+        "panNumber": "ABCDE5432G",
+        "pfAccountNumber": "UP/NOI/1234567/018",
+        "uanNumber": "1010189482"
+      }
+    ],
+    "parkengage_attendance": [
+      {
+        "id": "att-001",
+        "date": "2026-06-11",
+        "checkIn": "08:58 AM",
+        "checkOut": "06:12 PM",
+        "workingHours": 9.23,
+        "status": "Present",
+        "device": "macOS WebApp (Wired)",
+        "location": "H-195, Sector 63, Main Entry Gate"
+      },
+      {
+        "id": "att-002",
+        "date": "2026-06-10",
+        "checkIn": "09:02 AM",
+        "checkOut": "06:05 PM",
+        "workingHours": 9.05,
+        "status": "Present",
+        "device": "macOS WebApp (Wired)",
+        "location": "H-195, Sector 63, Main Entry Gate"
+      },
+      {
+        "id": "att-003",
+        "date": "2026-06-09",
+        "checkIn": "08:45 AM",
+        "checkOut": "05:45 PM",
+        "workingHours": 9.0,
+        "status": "Present",
+        "device": "macOS WebApp (Wired)",
+        "location": "H-195, Sector 63, Main Entry Gate"
+      },
+      {
+        "id": "att-004",
+        "date": "2026-06-08",
+        "checkIn": "09:12 AM",
+        "checkOut": "06:30 PM",
+        "workingHours": 9.3,
+        "status": "Present",
+        "device": "macOS WebApp (Wired)",
+        "location": "H-195, Sector 63, Main Entry Gate"
+      },
+      {
+        "id": "att-005",
+        "date": "2026-06-05",
+        "checkIn": "08:55 AM",
+        "checkOut": "06:00 PM",
+        "workingHours": 9.08,
+        "status": "Present",
+        "device": "macOS WebApp (Wired)",
+        "location": "H-195, Sector 63, Main Entry Gate"
+      },
+      {
+        "id": "att-006",
+        "date": "2026-06-04",
+        "checkIn": "09:30 AM",
+        "checkOut": "01:30 PM",
+        "workingHours": 4.0,
+        "status": "Half Day",
+        "device": "iOS MobileApp (WiFi)",
+        "location": "Internal Access Pt-3"
+      },
+      {
+        "id": "att-007",
+        "date": "2026-06-03",
+        "checkIn": "09:00 AM",
+        "checkOut": "06:15 PM",
+        "workingHours": 9.25,
+        "status": "Present",
+        "device": "macOS WebApp (Wired)",
+        "location": "H-195, Sector 63, Main Entry Gate"
+      },
+      {
+        "id": "att-008",
+        "date": "2026-06-02",
+        "checkIn": "08:42 AM",
+        "checkOut": "05:58 PM",
+        "workingHours": 9.26,
+        "status": "Present",
+        "device": "macOS WebApp (Wired)",
+        "location": "H-195, Sector 63, Main Entry Gate"
+      },
+      {
+        "id": "att-009",
+        "date": "2026-06-01",
+        "checkIn": "08:50 AM",
+        "checkOut": "06:01 PM",
+        "workingHours": 9.18,
+        "status": "Present",
+        "device": "macOS WebApp (Wired)",
+        "location": "H-195, Sector 63, Main Entry Gate"
+      }
+    ],
+    "parkengage_leave_balance": {
+      "casual": { "total": 12, "used": 4 },
+      "sick": { "total": 10, "used": 2.5 },
+      "earned": { "total": 18, "used": 6 },
+      "maternityOrPaternity": { "total": 60, "used": 0 }
+    },
+    "parkengage_leave_requests": [
+      {
+        "id": "lv-001",
+        "type": "Casual",
+        "startDate": "2026-06-25",
+        "endDate": "2026-06-26",
+        "days": 2,
+        "reason": "Family gathering & general personal obligations",
+        "status": "Pending",
+        "appliedDate": "2026-06-11"
+      },
+      {
+        "id": "lv-002",
+        "type": "Sick",
+        "startDate": "2026-05-18",
+        "endDate": "2026-05-19",
+        "days": 1.5,
+        "reason": "Mild fever and scheduled medical checkup",
+        "status": "Approved",
+        "appliedDate": "2026-05-16",
+        "approvedBy": "Vishal Gupta (VP of IT Operations)"
+      },
+      {
+        "id": "lv-003",
+        "type": "Earned",
+        "startDate": "2026-03-02",
+        "endDate": "2026-03-06",
+        "days": 5,
+        "reason": "Annual vacation with family trip",
+        "status": "Approved",
+        "appliedDate": "2026-02-15",
+        "approvedBy": "Vishal Gupta (VP of IT Operations)"
+      },
+      {
+        "id": "lv-004",
+        "type": "Casual",
+        "startDate": "2026-01-15",
+        "endDate": "2026-01-15",
+        "days": 1,
+        "reason": "Delivery installation at home residence",
+        "status": "Approved",
+        "appliedDate": "2026-01-12",
+        "approvedBy": "Vishal Gupta (VP of IT Operations)"
+      }
+    ],
+    "parkengage_tasks": [
+      {
+        "id": "tsk-001",
+        "title": "Optimize Valet Dispatch Metrics",
+        "description": "Prepare and analyze current-quarter dispatch response latencies and construct an optimization draft for valet operators.",
+        "project": "Operational Excellence",
+        "priority": "High",
+        "status": "In Progress",
+        "dueDate": "2026-06-15"
+      },
+      {
+        "id": "tsk-002",
+        "title": "Audit Touchless Parking Terminal Logs",
+        "description": "Analyze error frequency metrics for Terminal 4C and 4D at Corporate Hub West. Document hardware vs network faults.",
+        "project": "Terminal Health Integration",
+        "priority": "Medium",
+        "status": "Pending",
+        "dueDate": "2026-06-18"
+      },
+      {
+        "id": "tsk-003",
+        "title": "Weekly Status Slide Construction",
+        "description": "Incorporate operational metrics, SLA breaches, and resolution times into executive overview template for Vishal Gupta.",
+        "project": "Global Reporting System",
+        "priority": "High",
+        "status": "Completed",
+        "dueDate": "2026-06-10"
+      },
+      {
+        "id": "tsk-004",
+        "title": "Update Standard Operating Procedure (SOP)",
+        "description": "Coordinate with tech support to append specific troubleshooting protocols for offline ticket validators in the team manual.",
+        "project": "SOP Standardization",
+        "priority": "Low",
+        "status": "Completed",
+        "dueDate": "2026-06-05"
+      }
+    ],
+    "parkengage_payslips": [
+      {
+        "id": "pay-2026-05",
+        "month": "May",
+        "year": 2026,
+        "basicSalary": 6400,
+        "hra": 2560,
+        "conveyanceAllowance": 600,
+        "specialAllowance": 1240,
+        "pfDeduction": 768,
+        "tdsDeduction": 1100,
+        "professionalTax": 200,
+        "grossEarnings": 10800,
+        "totalDeductions": 2068,
+        "netPayable": 8732,
+        "salaryPaidDate": "2026-06-01"
+      },
+      {
+        "id": "pay-2026-04",
+        "month": "April",
+        "year": 2026,
+        "basicSalary": 6400,
+        "hra": 2560,
+        "conveyanceAllowance": 600,
+        "specialAllowance": 1240,
+        "pfDeduction": 768,
+        "tdsDeduction": 1100,
+        "professionalTax": 200,
+        "grossEarnings": 10800,
+        "totalDeductions": 2068,
+        "netPayable": 8732,
+        "salaryPaidDate": "2026-05-01"
+      },
+      {
+        "id": "pay-2026-03",
+        "month": "March",
+        "year": 2026,
+        "basicSalary": 6400,
+        "hra": 2560,
+        "conveyanceAllowance": 600,
+        "specialAllowance": 1240,
+        "pfDeduction": 768,
+        "tdsDeduction": 1100,
+        "professionalTax": 200,
+        "grossEarnings": 10800,
+        "totalDeductions": 2068,
+        "netPayable": 8732,
+        "salaryPaidDate": "2026-04-01"
+      }
+    ],
+    "parkengage_announcements": [
+      {
+        "id": "ann-01",
+        "title": "Global Q2 Operational Excellence Town Hall",
+        "content": "Please join us this coming Wednesday at 10:00 AM PST for our quarterly updates. Our CEO will discuss upcoming platform integrations and expansion into new terminal categories. Invites have been dispatched via Google Calendar.",
+        "postedBy": "Corporate HR Services",
+        "date": "2026-06-10",
+        "category": "General"
+      },
+      {
+        "id": "ann-02",
+        "title": "System Maintenance: Employee Portal Integrations",
+        "content": "The Portal will undergo system database migration on Saturday, June 13, between 12:00 AM and 03:00 AM EST. Access may be intermittently spotty. Please pre-submit any pending leaves or reimbursement logs prior to this window.",
+        "postedBy": "IT Infrastructure Team",
+        "date": "2026-06-09",
+        "category": "Urgent"
+      },
+      {
+        "id": "ann-03",
+        "title": "Revised Hybrid Working Policy Guidelines",
+        "content": "We have finalized and published our updated global hybrid schedule guidelines. Please review the detailed PDF in the corporate repository to understand the core minimum in-office baseline schedules starting July 1.",
+        "postedBy": "VP of HR & Policy",
+        "date": "2026-06-05",
+        "category": "Policy"
+      },
+      {
+        "id": "ann-04",
+        "title": "Celebrating Our Q1 Parking Tech Milestones",
+        "content": "A huge congratulations to the engineering and operations teams! Due to outstanding synergy, we secured seamless deployment across 12 new smart-parking facilities. Team dinner scheduled in our local offices this Friday! Check RSVP invites.",
+        "postedBy": "Executive Committee",
+        "date": "2026-06-01",
+        "category": "Celebration"
+      }
+    ],
+    "parkengage_claims": [
+      {
+        "id": "clm-001",
+        "category": "Internet & Phone",
+        "amount": 75.0,
+        "date": "2026-06-01",
+        "description": "Monthly home broadband reimbursement for operations hybrid duty allowance.",
+        "status": "Approved",
+        "appliedDate": "2026-06-01",
+        "approvedBy": "Rahul Mehta (Principal Controller)"
+      },
+      {
+        "id": "clm-002",
+        "category": "Travel & Fuel",
+        "amount": 142.5,
+        "date": "2026-06-08",
+        "description": "Travel expenses for onsite diagnostic audits of Terminals 4C/4D at Noida West hub.",
+        "status": "Pending",
+        "appliedDate": "2026-06-09"
+      },
+      {
+        "id": "clm-003",
+        "category": "Meals & Entertainment",
+        "amount": 58.2,
+        "date": "2026-05-15",
+        "description": "Client lunch meeting with Delhi NCR Parking operators to discuss digital ticketing SLAs.",
+        "status": "Approved",
+        "approvedBy": "Rahul Mehta (Principal Controller)",
+        "appliedDate": "2026-05-16"
+      }
+    ],
+    "parkengage_tickets": [
+      {
+        "id": "tkt-001",
+        "category": "Hardware Terminal Error",
+        "title": "Terminal 4C sensor unresponsive to card reads",
+        "description": "Operations team reports card swiper sensor on Terminal 4C fails intermittently. Needs low-level diagnostic or firmware recalibration.",
+        "priority": "High",
+        "status": "In Progress",
+        "appliedDate": "2026-06-09",
+        "lastUpdated": "2026-06-11",
+        "assignedTo": "Neha Sharma (Lead Systems Architect)",
+        "replies": [
+          {
+            "id": "rep-001",
+            "author": "Rishi Gautam",
+            "role": "Employee",
+            "content": "We had 3 customers complain today that the sensor is not picking up tap-to-pay.",
+            "timestamp": "2026-06-09 10:15 AM"
+          },
+          {
+            "id": "rep-002",
+            "author": "Neha Sharma",
+            "role": "Support Agent",
+            "content": "I have reviewed the telemetry logs. Running a remote firmware check and scheduling a physical technician visit.",
+            "timestamp": "2026-06-11 02:45 PM"
+          }
+        ]
+      },
+      {
+        "id": "tkt-002",
+        "category": "IT Access & Credentials",
+        "title": "Request for access to GCP BigQuery operations log index",
+        "description": "Need read-only access to BigQuery dataset 'parkengage-valet-dispatch' to complete response latencies optimization metrics dashboard.",
+        "priority": "Medium",
+        "status": "Open",
+        "appliedDate": "2026-06-11",
+        "lastUpdated": "2026-06-11",
+        "replies": []
+      }
+    ],
+    "parkengage_global_config": {
+      "maxCasualLeaves": 12,
+      "autoCheckoutHours": 9.0,
+      "portalStatus": "Standard Live",
+      "systemNotice": "Annual Security Audit of employee profile declarations is underway. Review your credentials before Friday."
+    },
+    "parkengage_admin_depts": [
+      { "id": "dept-1", "name": "Product Engineering", "lead": "Neha Sharma", "headcount": 14, "divisionsActive": 2, "budget": "₹14.2 Lakhs" },
+      { "id": "dept-2", "name": "IT Operations & Infrastructure", "lead": "Vishal Gupta", "headcount": 8, "divisionsActive": 3, "budget": "₹9.5 Lakhs" },
+      { "id": "dept-3", "name": "Finance & Accounts Suite", "lead": "Rahul Mehta", "headcount": 4, "divisionsActive": 1, "budget": "₹5.0 Lakhs" },
+      { "id": "dept-4", "name": "UI/UX Research Studio", "lead": "Preeti Deshmukh", "headcount": 6, "divisionsActive": 2, "budget": "₹6.8 Lakhs" },
+      { "id": "dept-5", "name": "Global Talent Acquisition", "lead": "Aditi Roy", "headcount": 5, "divisionsActive": 1, "budget": "₹4.5 Lakhs" }
+    ],
+    "parkengage_admin_assets": [
+      { "id": "AST-1049", "type": "Laptop", "model": "MacBook Pro M3 (16-inch)", "custodian": "Aarav Gupta", "serial": "C02HG89XQ05D", "status": "In Use", "condition": "A+ Perfect" },
+      { "id": "AST-8821", "type": "Desktop Server", "model": "Dell OptiPlex X-40", "custodian": "IT Command Rack", "serial": "DSK-990-8802", "status": "Active Node", "condition": "Optimal" },
+      { "id": "AST-2094", "type": "Mobile Terminal", "model": "Samsung Galaxy A54 Scanner", "custodian": "Naveen Kumar", "serial": "SIM-X7811-A", "status": "In Repair", "condition": "Screen Service" },
+      { "id": "AST-4091", "type": "IoT Gateway", "model": "Zigbee Sensor Hub G2", "custodian": "Main Entry Barrier", "serial": "ZGBT-9902", "status": "Active Node", "condition": "Outdoor Rated" },
+      { "id": "AST-5502", "type": "Access Card", "model": "RFID Security Pass Key", "custodian": "Priya Joshi", "serial": "RFID-104-502", "status": "In Use", "condition": "Functional" }
+    ],
+    "parkengage_admin_workflows": [
+      {
+        "id": "WF-101",
+        "name": "New Hire Provisioning Suite",
+        "trigger": "IF Employee status is Active",
+        "actions": ["Provision @parkengage.com email", "Credit standard casual leave balance", "Create IT laptop provisioning ticket"],
+        "active": true
+      },
+      {
+        "id": "WF-102",
+        "name": "High-Value Claim Escalation",
+        "trigger": "IF Expense claim amount > ₹5,000",
+        "actions": ["Hold auto-approval", "Route priority review to Finance Lead", "Notify Regional Auditor"],
+        "active": true
+      },
+      {
+        "id": "WF-103",
+        "name": "Shift Auto-Checkout Enforcement",
+        "trigger": "IF duty duration > 14 Hours",
+        "actions": ["Trigger automatic checkout", "Log missing punch exception report"],
+        "active": false
+      }
+    ],
+    "parkengage_admin_sys_brand": {
+      "orgName": "ParkEngage India Private Ltd",
+      "timeZone": "Asia/Kolkata (GMT+05:30)",
+      "baseCurrency": "INR (₹)",
+      "language": "English (US/India)",
+      "dateFormat": "YYYY-MM-DD",
+      "mfaRequired": true,
+      "oktaIntegrationStatus": "Connected",
+      "ssoDomain": "sso.parkengage.internal",
+      "ssoSessionMinutes": 30
+    },
+    "parkengage_admin_leave_rules": {
+      "casualAlloc": 12,
+      "sickAlloc": 10,
+      "earnedAlloc": 15,
+      "carryForwardLimit": 6,
+      "encashmentEnabled": true
+    },
+    "parkengage_admin_grace_rules": {
+      "graceMinutes": 15,
+      "monthlyLateCap": 3
+    },
+    "parkengage_company_holidays": ["2026-06-15", "2026-06-25"],
+    "parkengage_shift_models": [
+      { "id": "SFT-1", "name": "Core Morning General", "hours": "09:30 AM to 06:30 PM", "grace": "15 Mins grace", "lateRule": "Late Mark after 09:46 AM", "type": "Day" },
+      { "id": "SFT-2", "name": "Night Rotational Shift", "hours": "08:00 PM to 05:00 AM", "grace": "20 Mins grace", "lateRule": "Late Mark after 08:21 PM", "type": "Night" },
+      { "id": "SFT-3", "name": "Hybrid Flex Office", "hours": "Flexible 8 Hrs Log required", "grace": "No grace cap", "lateRule": "Requires biometric scan", "type": "Day" }
+    ],
+    "parkengage_joining_formalities": [
+      { "id": "nda_signed", "title": "NDA Non-Disclosure Privacy Sign-off", "docType": "Signed Legal Copy", "validTill": "2026-12-31", "expiresDate": "2027-04-30", "isMandatory": true },
+      { "id": "edu_cert", "title": "Educational Qualification Scan", "docType": "Certificate PDF", "validTill": "2028-06-01", "expiresDate": "2028-12-31", "isMandatory": true },
+      { "id": "relieving_letter", "title": "Relieving & Experience Letter", "docType": "Experience PDF/JPG", "validTill": "2029-01-01", "expiresDate": "2029-01-01", "isMandatory": false }
+    ],
+    "parkengage_sla_policies": [
+      { "id": "sla-1", "category": "Hardware Terminal Error", "responseSla": "2 Hrs", "resolutionSla": "6 Hrs", "active": true },
+      { "id": "sla-2", "category": "Software Application Issue", "responseSla": "4 Hrs", "resolutionSla": "24 Hrs", "active": true },
+      { "id": "sla-3", "category": "Security Incidents", "responseSla": "15 Mins", "resolutionSla": "2 Hrs", "active": true }
+    ],
+    "parkengage_timesheet_submission": {
+      "2026-06": { "status": "draft", "unlockRequested": false },
+      "2026-05": { "status": "approved", "unlockRequested": false },
+      "2026-04": { "status": "approved", "unlockRequested": false },
+      "2026-07": { "status": "draft", "unlockRequested": false }
+    },
+    "parkengage_payroll_cycle": {
+      "payPeriod": "June 2026",
+      "locked": false,
+      "lastComputedAt": null
+    },
+    "parkengage_bi_metrics": [
+      { "title": "Workforce Attrition Trend", "stat": "2.4%", "sub": "Down 0.6% from last quarter" },
+      { "title": "Monthly Payroll Run", "stat": "₹34.8 Lakhs", "sub": "Within quarterly budget" },
+      { "title": "Helpdesk SLA Adherence", "stat": "98.5%", "sub": "Avg response time: 42 mins" }
+    ],
+    "parkengage_monthly_approvals": [
+      {
+        "id": "sub-101",
+        "name": "Aarav Gupta",
+        "designation": "Senior React Developer",
+        "employeeId": "PE-2026-101",
+        "avatar": "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?auto=format&fit=crop&q=80&w=200",
+        "department": "Product Engineering",
+        "monthName": "June 2026",
+        "totalDaysPresent": 20,
+        "totalDaysLeave": 2,
+        "totalDaysAbsent": 0,
+        "leaveDays": { "10": "Sick Leave", "18": "Casual Leave" },
+        "leaveNotes": {
+          "10": "Suffered severe migraine, advised complete bed rest.",
+          "18": "Personal domestic emergency in native town."
+        },
+        "absentDays": [],
+        "status": "Pending Review"
+      },
+      {
+        "id": "sub-102",
+        "name": "Ananya Roy",
+        "designation": "Lead Interface Integrator",
+        "employeeId": "PE-2026-102",
+        "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200",
+        "department": "Product Engineering",
+        "monthName": "June 2026",
+        "totalDaysPresent": 21,
+        "totalDaysLeave": 1,
+        "totalDaysAbsent": 0,
+        "leaveDays": { "5": "Casual Leave" },
+        "leaveNotes": {
+          "5": "Broadband terminal physical repair line failure at residence."
+        },
+        "absentDays": [],
+        "status": "Pending Review"
+      },
+      {
+        "id": "sub-103",
+        "name": "Rohan Das",
+        "designation": "Architect, Backend Systems",
+        "employeeId": "PE-2026-103",
+        "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200",
+        "department": "Product Engineering",
+        "monthName": "June 2026",
+        "totalDaysPresent": 18,
+        "totalDaysLeave": 3,
+        "totalDaysAbsent": 1,
+        "leaveDays": { "11": "Privilege Leave", "12": "Privilege Leave", "13": "Privilege Leave" },
+        "leaveNotes": {
+          "11": "Pre-approved family vacation trip to Uttarakhand.",
+          "12": "Pre-approved family vacation trip to Uttarakhand.",
+          "13": "Pre-approved family vacation trip to Uttarakhand."
+        },
+        "absentDays": [24],
+        "status": "Pending Review"
+      },
+      {
+        "id": "sub-104",
+        "name": "Meera Joshi",
+        "designation": "Frontend Engineer II",
+        "employeeId": "PE-2026-104",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200",
+        "department": "Product Engineering",
+        "monthName": "June 2026",
+        "totalDaysPresent": 22,
+        "totalDaysLeave": 0,
+        "totalDaysAbsent": 0,
+        "leaveDays": {},
+        "leaveNotes": {},
+        "absentDays": [],
+        "status": "Approved"
+      },
+      {
+        "id": "sub-105",
+        "name": "Karan Malhotra",
+        "designation": "API Integration Specialist",
+        "employeeId": "PE-2026-105",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200",
+        "department": "Product Engineering",
+        "monthName": "June 2026",
+        "totalDaysPresent": 19,
+        "totalDaysLeave": 3,
+        "totalDaysAbsent": 0,
+        "leaveDays": { "22": "Sick Leave", "23": "Sick Leave", "24": "Sick Leave" },
+        "leaveNotes": {
+          "22": "Acute seasonal fever. Diagnostic report attached.",
+          "23": "Acute seasonal fever. Diagnostic report attached.",
+          "24": "Acute seasonal fever. Diagnostic report attached."
+        },
+        "absentDays": [],
+        "status": "Correction Requested",
+        "approverComments": "Please upload the medical certificate scan to complete leave verification."
+      }
+    ],
+    "parkengage_onboarding_state": {
+      "checkedItems": {
+        "family_details": true,
+        "medical_condition": false,
+        "emergency_contacts": true,
+        "edu_qualification": false,
+        "skills_sets": false,
+        "employment_details": false,
+        "joining_report": false,
+        "pf_form": false,
+        "nda_form": false,
+        "gratuity_form": false,
+        "mediclaim_form": false,
+        "bcg_form": false,
+        "esic_form2": false
+      },
+      "familyDetails": {
+        "spouseName": "Simran Gupta",
+        "fatherName": "Alok Gupta",
+        "motherName": "Sushma Gupta",
+        "dependentsCount": "2",
+        "dependentsList": "Sia Gupta (Daughter), Aarav Gupta (Son)"
+      },
+      "medicalConditions": {
+        "bloodGroup": "B+",
+        "allergies": "None reported",
+        "hasChronicCondition": "No",
+        "mediclaimCovered": "Yes",
+        "healthPolicyDetail": "Plan Premium Option A (Family floater covers up to ₹5 Lakhs)"
+      },
+      "emergencyContacts": {
+        "primaryName": "Sanjay Gupta",
+        "primaryRelation": "Brother",
+        "primaryPhone": "+91 98765 43210",
+        "secondaryName": "Neha Gupta",
+        "secondaryRelation": "Spouse",
+        "secondaryPhone": "+91 98123 45678",
+        "physicalAddress": "Apartment 202, Sector 62, Noida, Uttar Pradesh - 201301"
+      },
+      "skillsSets": {
+        "primaryStack": "Fullstack Engineering (React + Node.js)",
+        "keySkills": "React, TypeScript, Tailwind CSS, PostgreSQL, AWS, Docker",
+        "certifications": "AWS Certified Solutions Architect",
+        "capabilityStatement": "7+ years of industrial experience in cloud architecture and enterprise frontend systems."
+      },
+      "uploadedFiles": {},
+      "formSubmitted": false
+    },
+    "parkengage_onboarding_forms": {
+      "baseFileCategories": [
+        { "id": "edu_cert", "label": "Educational Qualification Scan" },
+        { "id": "relieving_letter", "label": "Relieving & Experience Letter" },
+        { "id": "salary_slips", "label": "Last 3 Months Salary Slips" },
+        { "id": "nda_signed", "label": "Signed ParkEngage NDA Form" }
+      ],
+      "mandatoryHrForms": [
+        { "label": "Joining Report Form", "file": "Joining_Report_v4.pdf" },
+        { "label": "PF Form 11 (Declaration)", "file": "PF_Form_11_v2.pdf" },
+        { "label": "ParkEngage NDA Form (Sign All Pages)", "file": "ParkEngage_NDA_v2.pdf" },
+        { "label": "Gratuity Form F", "file": "Gratuity_Form_F.pdf" },
+        { "label": "Mandatory Mediclaim Form", "file": "Mediclaim_Onboarding.pdf" },
+        { "label": "PF Form 2 (Nomination)", "file": "PF_Form_2.pdf" },
+        { "label": "PF Filing Guideline Doc", "file": "PF_Filing_Guidelines.pdf" },
+        { "label": "Gratuity Directives Guideline", "file": "Gratuity_Guidelines.pdf" }
+      ],
+      "policyDocuments": [
+        { "label": "POSH Compliance Policy", "file": "POSH_Compliance_v1.pdf" },
+        { "label": "Anti Bribery & Corruption Directives", "file": "Anti_Corruption_Policy.pdf" },
+        { "label": "Human Rights & Labour Code Book", "file": "Human_Rights_Policy_2026.pdf" }
+      ]
+    },
+    "parkengage_kudos": [
+      {
+        "date": "2026-06-12",
+        "employeeName": "Rishi Gautam",
+        "kudos": "Outstanding metrics analysis and telemetry implementation for Valet Dispatch SOPs!",
+        "manager": "Vishal Gupta"
+      },
+      {
+        "date": "2026-06-10",
+        "employeeName": "Neha Sharma",
+        "kudos": "Rapid diagnostic on sensor failures, deploying cloud hotfix under 20 minutes.",
+        "manager": "Rahul Mehta"
+      },
+      {
+        "date": "2026-06-08",
+        "employeeName": "Tanya Jamil",
+        "kudos": "Incredible client satisfaction feedback for the updated touchless parking UI portal.",
+        "manager": "Neha Sharma"
+      },
+      {
+        "date": "2026-06-03",
+        "employeeName": "Manish Patel",
+        "kudos": "Exceptional dispatch organization during peak service hours at Noida Central.",
+        "manager": "Vishal Gupta"
+      }
+    ],
+    "parkengage_landing_highlights": {
+      "heroSlides": [
+        {
+          "image": "https://xnet.parkengagesolutions.com/uploads/header/ED%20Gangaram.png",
+          "title": "ParkEngage Workspace",
+          "subtitle": "Empowering scalable technology systems and automated parking logistics at India's flagship Operations Hub.",
+          "badge": "Campus Center, Noida"
+        },
+        {
+          "image": "https://xnet.parkengagesolutions.com/uploads/header/ED%20Magnum.png",
+          "title": "High-Reliability Operations",
+          "subtitle": "Our operations experts and integration specialists deliver intelligent mobile apps and touchless interfaces.",
+          "badge": "Team Synergy"
+        },
+        {
+          "image": "https://xnet.parkengagesolutions.com/uploads/header/PE%20Employee%20Dashboard.png",
+          "title": "Digital at Every Touchpoint",
+          "subtitle": "Leading automation across global parking facilities through real-time cloud dashboards.",
+          "badge": "Global Operations"
+        }
+      ],
+      "upcomingEvents": [
+        { "color": "bg-emerald-400", "title": "Noida Campus Wellness Day", "when": "June 21, 2026 • 09:00 AM IST" },
+        { "color": "bg-amber-400", "title": "Q2 Company Town Hall", "when": "June 28, 2026 • 04:00 PM IST" },
+        { "color": "bg-indigo-400", "title": "Scheduled Portal Maintenance", "when": "June 20, 2026 • 12:00 AM IST" }
+      ],
+      "birthdays": [
+        { "name": "Nitin Khatri", "date": "Jun 23", "dept": "Tech Operations", "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300" },
+        { "name": "Vijay Pippal", "date": "Jun 19", "dept": "Database Admin", "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=300" },
+        { "name": "Vicky Tyagi", "date": "Jun 07", "dept": "Automotive Embedded", "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=300" },
+        { "name": "Robin Khatri", "date": "Jun 23", "dept": "Solutions Architecture", "photo": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=300" }
+      ],
+      "workAnniversaries": [
+        { "name": "Siddharth Nair", "milestone": "3 Years", "date": "Jun 12", "role": "Relations Manager" },
+        { "name": "Neha Sharma", "milestone": "2 Years", "date": "Jun 15", "role": "Lead Systems Architect" },
+        { "name": "Manish Patel", "milestone": "1 Year", "date": "Jun 04", "role": "Operations Coordinator" }
+      ],
+      "outworksBlogs": [
+        {
+          "title": "Automotive Embedded Systems in Modern Transportation Tech",
+          "summary": "Firmware, electronic control units (ECUs), and embedded processors powering real-time vehicle diagnostics and valet dispatch APIs.",
+          "tag": "Automotive Tech",
+          "readTime": "5 min read",
+          "image": "https://images.unsplash.com/photo-1508974239320-0a029497e820?auto=format&fit=crop&q=80&w=400"
+        },
+        {
+          "title": "RPA Support Transitions for Automated Industry Segments",
+          "summary": "Robotic Process Automation acts as the catalyst reducing administrative latency and improving dispatch reliability across facilities.",
+          "tag": "Automation / RPA",
+          "readTime": "4 min read",
+          "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=400"
+        },
+        {
+          "title": "GIS-based Property Tax Management for Municipalities",
+          "summary": "Mapping spatial parcel attributes directly to municipal billing tables for fast, transparent civic operations.",
+          "tag": "GIS Software",
+          "readTime": "6 min read",
+          "image": "https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=400"
+        },
+        {
+          "title": "SaaS Integrations: Touchless Parking Solutions",
+          "summary": "Seamless mobile-app endpoints enabling contactless check-in and digital validation during peak facility traffic.",
+          "tag": "Partner Spotlight",
+          "readTime": "5 min read",
+          "image": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&q=80&w=400"
+        }
+      ]
+    },
+    "parkengage_org_chart": {
+      "root": {
+        "employeeId": "PE2604045",
+        "fullName": "Rishi Gautam",
+        "designation": "UI Architect & Product Design",
+        "department": "UI/UX Research & Development Department",
+        "email": "rishi.gautam@parkengage.com",
+        "phone": "+91 98765 43210",
+        "avatarUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+        "status": "Active",
+        "skills": ["React 19 Systems", "Vite Bundler", "Tailwind Spec Layouts", "Enterprise UI Systems", "Figma Token Architectures"]
+      },
+      "avatarPools": {
+        "devAvatars": [
+          "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=150",
+          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150",
+          "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&q=80&w=150"
+        ],
+        "desAvatars": [
+          "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150",
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150"
+        ],
+        "qaAvatars": [
+          "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150",
+          "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150"
+        ],
+        "seoAvatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150",
+        "aiAvatar": "https://images.unsplash.com/photo-1628157582853-a796fa650a6a?auto=format&fit=crop&q=80&w=150"
+      },
+      "leadsConfig": [
+        {
+          "id": "TL-001",
+          "name": "Arjun Mehta",
+          "designation": "Lead Developer & System Integrator",
+          "department": "Product Engineering",
+          "email": "arjun.mehta@parkengage.com",
+          "phone": "+91 99123 41001",
+          "avatarUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
+          "status": "Active",
+          "focus": "Software Architecture & Micro-APIs",
+          "skills": ["Docker Core", "Node.js Architecture", "BigQuery Pipelines", "TypeScript Engineering"],
+          "namesPool": {
+            "developers": ["Aarav Gupta", "Ananya Roy", "Rohan Das"],
+            "designers": ["Meera Joshi", "Karan Malhotra"],
+            "qas": ["Suresh Nair", "Ishan Sharma"],
+            "seo": ["Varun Verma"],
+            "ai": ["Dr. Alok Verma"]
+          }
+        },
+        {
+          "id": "TL-002",
+          "name": "Samantha Rodrigues",
+          "designation": "Director of Smart UX Design",
+          "department": "Product Engineering",
+          "email": "samantha.r@parkengage.com",
+          "phone": "+91 99123 41002",
+          "avatarUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200",
+          "status": "Active",
+          "focus": "Creative Web Direction & Accessibility",
+          "skills": ["Visual Guidelines", "A11y Frameworks", "Interactive Prototypes", "Micro-interactions"],
+          "namesPool": {
+            "developers": ["Amit Singh", "Deepika Rao", "Sanjay Nair"],
+            "designers": ["Zara Khan", "Riya Sen"],
+            "qas": ["Pooja Hegde", "Nidhi Gupta"],
+            "seo": ["Tanya Sen"],
+            "ai": ["Rishi Kapoor"]
+          }
+        },
+        {
+          "id": "TL-003",
+          "name": "Rajesh Kumar",
+          "designation": "Quality & Release Automation Lead",
+          "department": "Global Operations",
+          "email": "rajesh.k@parkengage.com",
+          "phone": "+91 99123 41003",
+          "avatarUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200",
+          "status": "Busy",
+          "focus": "CI/CD Deployment & Automated Test Suites",
+          "skills": ["E2E Integrity", "Selenium Automation", "Load Diagnostic Matrix", "Security Audits"],
+          "namesPool": {
+            "developers": ["Abhishek Lal", "Gaurav Mehta", "Mehul Chawla"],
+            "designers": ["Preeti Singh", "Vikram Roy"],
+            "qas": ["Shalini Sharma", "Sunil Kumar"],
+            "seo": ["Manish Joshi"],
+            "ai": ["Ayesha Khan"]
+          }
+        },
+        {
+          "id": "TL-004",
+          "name": "Priya Sharma",
+          "designation": "Growth Marketing & SEO Strategy Director",
+          "department": "Customer Success",
+          "email": "priya.s@parkengage.com",
+          "phone": "+91 99123 41004",
+          "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200",
+          "status": "Active",
+          "focus": "Search Optimization & Domain Authority",
+          "skills": ["Webmaster Suite", "Keyword Strategy", "Performance Diagnostics", "Funnel Analytics"],
+          "namesPool": {
+            "developers": ["Devendra Patil", "Neha Joshi", "Rahul Saxena"],
+            "designers": ["Anjali Verma", "Rajendra Sen"],
+            "qas": ["Kunal Deshmukh", "Prachi Gupta"],
+            "seo": ["Ajay Malhotra"],
+            "ai": ["Abhay Deol"]
+          }
+        },
+        {
+          "id": "TL-005",
+          "name": "Kabir Malhotra",
+          "designation": "Principal AI Research Scientist",
+          "department": "Product Engineering",
+          "email": "kabir.m@parkengage.com",
+          "phone": "+91 99123 41005",
+          "avatarUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200",
+          "status": "Active",
+          "focus": "Applied ML & Agentic Integrations",
+          "skills": ["LLM Pipelines", "Vector Embeddings", "Retrieval Models", "Schema Architectures"],
+          "namesPool": {
+            "developers": ["Nikhil Joshi", "Shreya Roy", "Nitin Saxena"],
+            "designers": ["Monica Geller", "Joey Tribbiani"],
+            "qas": ["Chandler Bing", "Ross Geller"],
+            "seo": ["Rachel Green"],
+            "ai": ["Phoebe Buffay"]
+          }
+        }
+      ]
+    }
+  }
+}

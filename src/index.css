@@ -2,28 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
-@variant dark (&:where(.dark, .dark *));
-
-html {
-  font-size: 18px !important;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-sans: "Google Sans", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Google Sans", "Outfit", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  /* Configure designated branding color #4a90e2 and variations */
+  /* Brand palette centered on #4a90e2 */
   --color-brand: #4a90e2;
   --color-brand-light: #ebf3fc;
   --color-brand-medium: #70a6ec;
   --color-brand-dark: #2c72c1;
   --color-brand-hover: #3b82d4;
 
-  /* Retheming Indigo palette to use our beautiful new brand color shades */
+  /* Cohesive Indigo alias tokens aligned with brand blue */
   --color-indigo-50: #ebf3fc;
   --color-indigo-100: #d6e7f9;
-  --color-indigo-150: #b9d7f6;
   --color-indigo-200: #adcff5;
   --color-indigo-300: #7eb3ef;
   --color-indigo-400: #4a90e2;
@@ -32,15 +27,10 @@ html {
   --color-indigo-700: #1d5ba5;
   --color-indigo-800: #12437e;
   --color-indigo-900: #0f2e5a;
-
-  /* Additional brand accents */
-  --color-blue-50: #ebf3fc;
-  --color-blue-500: #4a90e2;
-  --color-blue-600: #2c72c1;
-  --color-blue-700: #1d5ba5;
+  --color-indigo-950: #091d3a;
 }
 
-/* Custom scrollbar styling for a premium aesthetic */
+/* Custom scrollbar styling */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -51,176 +41,88 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(156, 163, 175, 0.25);
+  background: rgba(148, 163, 184, 0.35);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(156, 163, 175, 0.45);
+  background: rgba(100, 116, 139, 0.55);
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: #f9fafb;
-  color: #111827;
-  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #f8fafc;
+  color: #0f172a;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Hardware composting and layout acceleration layer setup to avoid scrolling/paint lag */
-body, 
-main,
-aside,
-header,
-.transition-all {
-  will-change: transform, background-color, opacity;
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
 
 .font-display {
   font-family: var(--font-display);
 }
 
-/* Elegant & High-Contrast Dark Theme Overrides */
 html.dark,
 .dark {
   color-scheme: dark;
 }
 
 .dark body {
-  background-color: #0b0f19;
-  color: #f3f4f6;
+  background-color: #090d16;
+  color: #f1f5f9;
 }
 
-/* Sidebar and Header panels */
-.dark aside,
-.dark header,
-.dark .bg-white {
-  background-color: #0d121f !important;
-  color: #f3f4f6 !important;
+@keyframes scroll-reel-char-rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* All headings and dominant texts must be high-contrast white in dark mode */
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6,
-.dark .text-slate-955,
-.dark .text-slate-950,
-.dark .text-slate-900,
-.dark .text-slate-800,
-.dark .text-slate-850,
-.dark .text-zinc-950,
-.dark .text-zinc-900,
-.dark .text-zinc-800,
-.dark .text-zinc-850 {
-  color: #ffffff !important;
+@keyframes scroll-reel-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
 }
 
-/* Dim border color across all pages in dark mode precisely */
-.dark .border,
-.dark .border-t,
-.dark .border-b,
-.dark .border-l,
-.dark .border-r,
-.dark .border-slate-100,
-.dark .border-slate-150,
-.dark .border-slate-200,
-.dark .border-slate-202,
-.dark .border-slate-350,
-.dark .border-zinc-150,
-.dark .border-zinc-200,
-.dark .border-zinc-300,
-.dark .border-zinc-700,
-.dark .border-zinc-750,
-.dark .border-zinc-800 {
-  border-color: rgba(30, 41, 59, 0.7) !important;
+.scroll-reel-char {
+  display: inline-block;
+  transform: translateY(12px);
+  opacity: 0;
+  animation: scroll-reel-char-rise 400ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.dark .bg-zinc-50,
-.dark .bg-zinc-100,
-.dark .bg-slate-50,
-.dark .bg-slate-55 {
-  background-color: #161e2e !important;
+.scroll-reel-exit {
+  animation: scroll-reel-exit 240ms cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 
-.dark .text-zinc-900,
-.dark .text-slate-900,
-.dark .text-slate-800,
-.dark .text-slate-850 {
-  color: #f9fafb !important;
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
-.dark .text-zinc-500,
-.dark .text-slate-400,
-.dark .text-slate-405,
-.dark .text-slate-450 {
-  color: #94a3b8 !important;
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-payslip-canvas,
+  #printable-payslip-canvas * {
+    visibility: visible;
+  }
+  #printable-payslip-canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none !important;
+    border: none !important;
+  }
 }
-
-.dark .text-zinc-650,
-.dark .text-slate-650,
-.dark .text-slate-700,
-.dark .text-slate-705 {
-  color: #94a3b8 !important;
-}
-
-.dark .text-slate-300 {
-  color: #cbd5e1 !important;
-}
-
-/* Inputs and Forms */
-.dark input,
-.dark select,
-.dark textarea {
-  background-color: #161e2e !important;
-  border-color: #1e293b !important;
-  color: #f9fafb !important;
-}
-
-/* Interactive hover elements */
-.dark .hover\:bg-zinc-50:hover,
-.dark .hover\:bg-slate-50:hover,
-.dark .hover\:bg-zinc-55:hover,
-.dark .hover\:bg-zinc-100:hover,
-.dark .hover\:bg-slate-205:hover {
-  background-color: #1e293b !important;
-}
-
-.dark .hover\:bg-slate-50\/50:hover {
-  background-color: rgba(30, 41, 59, 0.5) !important;
-}
-
-.dark .bg-slate-100 {
-  background-color: #1e293b !important;
-  color: #f9fafb !important;
-}
-
-.dark .bg-brand-light {
-  background-color: rgba(74, 144, 226, 0.15) !important;
-  color: #70a6ec !important;
-}
-
-/* Correct active highlight labels in dark mode */
-.dark .text-indigo-700 {
-  color: #60a5fa !important;
-}
-.dark .bg-indigo-50 {
-  background-color: rgba(37, 99, 235, 0.15) !important;
-}
-
-.dark .text-red-650 {
-  color: #f87171 !important;
-}
-
-.dark .shadow-sm,
-.dark .shadow-md,
-.dark .shadow-lg,
-.dark .shadow-xl {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45) !important;
-}
-
